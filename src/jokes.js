@@ -27,6 +27,7 @@ class Jokes extends Component {
       );
   };
 
+  
   jokes = () => {
     return this.state.jokes.map((joke, key) => (
 
@@ -38,6 +39,7 @@ class Jokes extends Component {
         marginBottom="2rem"
         width={"fit-content"}
         blockSize={"fit-content"}
+        onClick={() =>  navigator.clipboard.writeText(joke.joke)}
       >
         <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
           <Text
