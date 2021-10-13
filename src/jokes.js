@@ -29,6 +29,7 @@ class Jokes extends Component {
 
   jokes = () => {
     return this.state.jokes.map((joke, key) => (
+
       <Box
         key={key}
         border={3}
@@ -63,6 +64,7 @@ class Jokes extends Component {
             {joke.joke}
           </Text>
         </Box>
+        
       </Box>
     ));
   };
