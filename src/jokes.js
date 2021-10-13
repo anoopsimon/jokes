@@ -1,37 +1,21 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
 import {
-  Link,
   Box,
   Text,
-  Image,
   Center,
-  Fade,
-  ScaleFade,
-  Slide,
-  SlideFade,
   Heading,
-  HStack,
-  Tag,
   CircularProgress
 } from "@chakra-ui/react";
 
-const breakpoints = createBreakpoints({
-  sm: "30em",
-  md: "48em",
-  lg: "62em",
-  xl: "80em",
-  "2xl": "96em",
-});
+
 
 class Jokes extends Component {
   constructor(props) {
     super(props);
     this.state = {
       jokes: [],
-      loading:true,
-      images: ["cat.jpg", "cat1.jpg", "cat2.jpg"],
+      loading:true
     };
   }
 
@@ -45,7 +29,6 @@ class Jokes extends Component {
       )
       .then(
         (res) => {
-          console.log("Response : " + res.data);
           this.setState({ jokes: res.data.jokes ,loading:false});
         },
         { headers }
@@ -55,7 +38,7 @@ class Jokes extends Component {
   render() {
     if(this.state.loading){
       return <Center>
-        <CircularProgress isIndeterminate color="green.300">
+        <CircularProgress isIndeterminate color="#7928CA">
         </CircularProgress>
         </Center>
     }
@@ -102,7 +85,7 @@ class Jokes extends Component {
                     fontSize="lg"
                     bgGradient="linear(to-l, #7928CA, #FF0080)"
                     bgClip="text"
-                    fontWeight="extrabold"
+                    fontWeight="bold"
                   >
                     {joke.joke}
                   </Text>
