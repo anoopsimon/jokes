@@ -1,1 +1,1 @@
-Live here : [https://anoopsimon.github.io/jokes/](Jokes.)
+Live here : [http://anoopsimon.github.io/jokes/](Jokes.)
